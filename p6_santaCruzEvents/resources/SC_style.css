@@ -345,6 +345,13 @@ nav ul li a {
     border: 1px solid lightgray;
 }
 
+#bocadillo {
+    position: relative;
+    z-index: 2;
+    bottom: 10em;
+    display: none;
+}
+
 .empleado .img-empleado img {
     max-width: 100%;
     height: auto;

@@ -1,0 +1,509 @@
+/*estilo general*/
+html {
+    margin: 0;
+    padding: 0;
+    /*background-color: rgb(2, 2, 75);*/
+}
+
+/*FUENTES*/
+@font-face {
+    font-family: 'letraOeste';
+    src: url(./fonts/Smokum-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Fira_Sans';
+    src: url(./fonts/FiraSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Fira_Sans_italic';
+    src: url(./fonts/FiraSans-Italic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Fira_Sans_bold';
+    src: url(./fonts/FiraSans-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Fira_Sans_bold_italic';
+    src: url(./fonts/FiraSans-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: 'titulo';
+    src: url(./fonts/FiraSans-BlackItalic.ttf) format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira_Sans';
+    background-color: goldenrod;
+}
+
+/*banner*/
+header {
+    width: 100%;
+    height: 10rem;
+    padding: 0.5rem;
+    border: 3px solid darkgoldenrod;
+    border-radius: 5px;
+    display: flex;
+    position: fixed;
+    z-index: 5;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*background-color: rgb(2, 2, 29); */
+    background-image: linear-gradient(rgb(0, 0, 10), rgb(5, 5, 68));
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    height: 70%;
+    align-items: center;
+}
+
+.logo {
+    height: 6.5rem;
+    width: 6.5rem;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-image: url(./images/logo.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 0 1rem;
+}
+
+.titulo h1 {
+    font-family: 'titulo';
+    font-size: 3.5rem;
+    color: darkgoldenrod;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+               1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+    letter-spacing: 0.5rem;
+    text-decoration: underline overline;
+}
+
+.subtitle {
+    height: 30%;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.subtitle h2 {
+    display: inline-block;
+    margin: 0 auto;
+    font-family: 'letraOeste';
+    font-size: 3rem;
+    color: darkgoldenrod;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+               1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+    letter-spacing: 0.25rem;
+    margin: 0;
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        height: 7rem;
+    }
+    .title {
+        width: 100%;
+        height: 4rem;
+    }
+    .subtitle {
+        width: 100%;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+    .logo {
+        height: 3.75rem;
+        width: 3.75rem;
+    }
+    .title h1 {
+        font-size: 1.5rem;
+        letter-spacing: 0;
+    }
+    .subtitle h2 {
+        font-size: 1.3rem;
+        letter-spacing: 0;
+        margin: 0 auto;
+    }
+}
+
+/*Barra de navegación*/
+nav {
+    margin-top: 0;
+    background-color: rgb(11, 72, 105);
+    color: ghostwhite;
+    height: 3rem;
+    position: relative;
+    top: 11rem;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 3;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+@media only screen and (max-width: 480px) {
+    nav {
+        display: none;
+    }
+}
+/*cuerpo principal*/
+.main {
+    position: relative;
+    top: 9.5em;
+    width: 80%;
+    padding: 2rem;
+    margin: 0 auto;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: maroon;
+    color: lightgray;
+}
+
+
+/*descripción*/
+.description {
+    font-size: 1.2rem;
+    padding-top: 0;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.description h1 {
+    text-align: center;
+}
+
+.description .img_container {
+    width: 50%;
+    height: 23rem;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 480px) {
+    .description .img_container {
+        height: 15rem;
+    }
+}
+
+.description .img_container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/*productos*/
+.productos-container {
+    font-size: 1.2rem;
+    padding-top: 0;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid lightgray;
+    text-align: center;
+}
+
+.productos-container h1 {
+    margin: 3rem auto;
+}
+
+.lista-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.producto {
+    padding: 1rem;
+    width: 25%;
+    height: 20rem;
+    border: 1px solid white;
+    background-color: rgb(87, 2, 2);
+    border-radius: 3px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 480px) {
+    .lista-productos {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .producto {
+        width: 80%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+}
+
+.producto p {
+    font-size: 1rem;
+    font-family: 'Fira_Sans_italic';
+}
+
+.img-producto {
+    width: 70%;
+    height: 9rem;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.img-producto img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.letra-bonita {
+    font-family: 'Fira_Sans_bold_italic', sans-serif;
+}
+
+/*empleados*/
+.personal {
+    font-size: 1.2rem;
+    padding-top: 0;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid lightgray;
+    text-align: center;
+}
+
+.empleados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 1rem;
+    align-items: center;
+}
+
+#naiara {
+    font-size: 0.8rem;
+}
+
+.mencion {
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.empleado {
+    width: 22%;
+    height: 20rem;
+    background-color: rgb(62, 5, 5);
+    border: 2.5px solid darkgoldenrod;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 1rem 0.5rem;
+}
+
+.empleado h3 {
+    font-family: 'Fira_Sans_bold_italic', sans-serif;
+    background-color: rgb(2, 17, 33);
+    border-top: 2.5px solid darkgoldenrod;
+    border-bottom: 2.5px solid darkgoldenrod;
+    padding: 2px 3px;
+    width: 90%;
+}
+
+.empleado p {
+    font-family: 'Fira_Sans_italic';
+    font-size: 1rem;
+}
+
+.empleado .img-empleado {
+    width: 75%;
+    height: 75%;
+    overflow: hidden;
+    border: 1px solid lightgray;
+}
+
+#bocadillo {
+    position: relative;
+    z-index: 2;
+    bottom: 10em;
+    display: none;
+}
+
+.empleado .img-empleado img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media only screen and (max-width: 480px) {
+    .empleado {
+        width: 90%;
+    }
+}
+
+
+/*agradecimientos*/
+.agradecimientos {
+    font-size: 1.2rem;
+    padding-top: 0;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid lightgray;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.aimg {
+    width: 60%;
+    height: 29rem;
+    overflow: hidden;
+    margin: 1.5rem;
+    padding: 1rem;
+    background-color: rgb(62, 5, 5);
+}
+
+.jeque {
+    height: 26rem;
+}
+
+.aimg img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media only screen and (max-width: 480px) {
+    .aimg {
+        height: 10rem;
+    }
+    .jeque {
+        height: 8rem;
+    }
+    .jeque p {
+        font-size: 0.75rem;
+    }
+}
+
+/*boton misterioso*/
+.boton_misterioso {
+    display: flex;
+    margin: 2rem auto;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mistery{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: 3px solid wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*footer*/
+
+footer {
+    width: 100%;
+    height: 5rem;
+    position: relative;
+    background-image: linear-gradient(rgb(0, 0, 10), rgb(5, 5, 68));
+    margin-top: 5rem;
+    padding: 1.5rem;
+    z-index: 20;
+    color: lightgray;
+    border-top: 2px solid darkgoldenrod;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer p {
+    font-size: smaller;
+}
+
+.right {
+
+    margin-right: 10rem;
+}
+
+
+/*el mavado mustafa*/
+#malvado_mustafa {
+    width: 100%;
+    height: 2000rem;
+    background-image: url(images/incendio.jpg);
+    background-repeat: repeat-y;
+    background-size: contain;
+    position: absolute;
+    z-index: 15;
+    display: none;
+}
+
+#corre {
+    color: white;
+    display: block;
+    position: relative;
+    top: 1rem;
+    left: 45%;
+    font-size: 2.5rem;
+}
+
+.imagen_malvado {
+    margin: 3rem auto;
+    width: 80%;
+    height: 50rem;
+    overflow: hidden;
+}
+.imagen_malvado img {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 2rem solid black;
+}
+
+@media only screen and (max-width: 480px) {
+    html {
+        width: 100%;
+    }
+    body {
+        width: 100%;
+    }
+    #malvado_mustafa{
+        width: 100%;
+    }
+    
+    .imagen_malvado img {
+        border: 1rem solid black;
+    }
+}

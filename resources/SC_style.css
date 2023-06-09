@@ -507,3 +507,27 @@ footer {
         border: 1rem solid black;
     }
 }
+
+.alineacion {
+    margin: 3rem auto;
+
+}
+
+.formacion {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.jugador {
+    font-size: small;
+    margin: 0 1rem;
+}
+
+@media only screen and (max-width: 480px) {
+    .formacion {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
